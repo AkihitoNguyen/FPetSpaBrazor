@@ -1,0 +1,40 @@
+﻿@page "/products"
+@inject IProductServices ProductServices
+@inject NavigationManager NavigationMannager
+@attribute [StreamRendering(true)]
+
+<h3>ProductList</h3>
+
+@if (products == null)
+{
+    <span>Loading...</span>
+}
+else if (products.Count == 0)
+{
+    <span>Product list is empty!!!</span>
+}else
+{
+    <ul>
+        @foreach(var i in products)
+        {
+            <li>@i.ProductName</li>
+        }
+    </ul>   
+}
+
+<button onclick="CreateProduct" class="btn btn-primary">Create Game</button>
+
+
+@code {
+    List<Product> products = new List<Product>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        products = await ProductServices.getAll();
+    }
+
+    void CreateProduct()
+    {
+        NavigationMannager.NavigateTo("/edit-product");
+    }
+}

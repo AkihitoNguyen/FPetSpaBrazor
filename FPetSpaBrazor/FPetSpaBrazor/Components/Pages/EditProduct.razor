@@ -1,0 +1,19 @@
+﻿@page "/edit-product"
+@page "/edit-product/{id:string}"
+
+<h3>Eidt Product</h3>
+
+<EditForm Model="product" OnSubmit="HandleSubmition">
+    <label>Name</label>
+    <InputText @bind-Name="product.ProductName">@product.ProductName</InputText>
+    <button type="submit" class="btn-primary btn"></button>
+</EditForm>
+
+@code {
+    Product product = new Product();
+
+    async Task HandleSubmition()
+    {
+        
+    }
+}

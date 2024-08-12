@@ -1,6 +1,8 @@
 using FPetSpaBrazor.Client.Pages;
 using FPetSpaBrazor.Components;
+using FPetSpaBrazor.DAL;
 using FPetSpaBrazor.Data;
+using FPetSpaBrazor.DLL.Services.ProductServices;
 using Microsoft.EntityFrameworkCore;
 
 namespace FPetSpaBrazor
@@ -21,6 +23,9 @@ namespace FPetSpaBrazor
                 option.UseSqlServer(builder.Configuration.GetConnectionString("FpetSpaBrazor"));
             });
 
+            builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+            //Add Entity Services
+            builder.Services.AddScoped<IProductServices, ProductServices>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
