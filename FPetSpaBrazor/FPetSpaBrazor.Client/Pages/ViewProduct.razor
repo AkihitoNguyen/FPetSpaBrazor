@@ -1,0 +1,33 @@
+﻿@page "/counters"
+@rendermode InteractiveAuto
+@inject HttpClient httpClient
+
+<PageTitle>Counter</PageTitle>
+
+
+<h3>ViewProduct</h3>
+
+@if(products != null)
+{
+    if(products.Count > 0)
+    {
+        <ul>
+            @foreach (var i in products)
+            {
+                <li>@i.ProductName</li>
+            }
+        </ul>
+    }
+}else
+{
+    <h3>Loading..</h3>
+}
+
+@code {
+    private List<Product> products = new List<Product>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        products = await httpClient.GetFromJsonAsync<List<Product>>("api/product");
+    }
+}

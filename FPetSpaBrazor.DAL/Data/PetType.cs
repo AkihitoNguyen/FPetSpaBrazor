@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FPetSpaBrazor.Data;
+namespace FPetSpaBrazor.DAL.Data;
+
 
 public partial class PetType
 {

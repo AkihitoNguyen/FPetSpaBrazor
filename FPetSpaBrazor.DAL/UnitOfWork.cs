@@ -1,5 +1,5 @@
-﻿using FPetSpaBrazor.DAL.Repositories;
-using FPetSpaBrazor.Data;
+﻿using FPetSpaBrazor.DAL.Data;
+using FPetSpaBrazor.DAL.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;

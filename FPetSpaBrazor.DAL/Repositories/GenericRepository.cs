@@ -1,4 +1,4 @@
-﻿using FPetSpaBrazor.Data;
+﻿using FPetSpaBrazor.DAL.Data;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

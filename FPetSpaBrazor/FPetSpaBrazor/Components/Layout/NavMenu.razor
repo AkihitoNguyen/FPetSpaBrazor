@@ -1,36 +1,32 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">FPetSpaBrazor</a>
+﻿
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0">
+    <a href="/" class="navbar-brand ms-lg-5">
+        <h1 class="m-0 text-uppercase text-dark"><i class="bi bi-shop fs-1 text-primary me-3"></i>Pet Shop</h1>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto py-0">
+            <NavLink href="/" Match="NavLinkMatch.All" class="nav-item nav-link active">Home</NavLink>
+            <NavLink href="about.html" Match="NavLinkMatch.Prefix" class="nav-item nav-link">About</NavLink>
+            <NavLink href="service.html" class="nav-item nav-link">Service</NavLink>
+            <NavLink href="product.html" class="nav-item nav-link">Product</NavLink>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                <div class="dropdown-menu m-0">
+                    <NavLink href="price.html" class="dropdown-item">Pricing Plan</NavLink>
+                    <NavLink href="team.html" class="dropdown-item">The Team</NavLink>
+                    <NavLink href="testimonial.html" class="dropdown-item">Testimonial</NavLink>
+                    <NavLink href="blog.html" class="dropdown-item">Blog Grid</NavLink>
+                    <NavLink href="detail.html" class="dropdown-item">Blog Detail</NavLink>
+                </div>
+            </div>
+            <NavLink href="contact.html" class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Contact <i class="bi bi-arrow-right"></i></NavLink>
+        </div>
     </div>
-</div>
+</nav>
+<!-- Navbar End -->
 
-<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
-
-<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="weather">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="products">
-                <span class="bi" aria-hidden="true"></span> Products
-            </NavLink>
-        </div>
-    </nav>
-</div>
 

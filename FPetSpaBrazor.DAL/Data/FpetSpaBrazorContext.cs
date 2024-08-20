@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿
+using FPetSpaBrazor.DAL.Data;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace FPetSpaBrazor.Data;
+namespace FPetSpaBrazor.DAL.Data;
 
 public partial class FpetSpaBrazorContext : IdentityDbContext<ApplicationUser>
 {

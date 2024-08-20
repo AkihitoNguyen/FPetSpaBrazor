@@ -12,14 +12,15 @@
 else if (products.Count == 0)
 {
     <span>Product list is empty!!!</span>
-}else
+}
+else
 {
     <ul>
-        @foreach(var i in products)
+        @foreach (var i in products)
         {
             <li>@i.ProductName</li>
         }
-    </ul>   
+    </ul>
 }
 
 <button onclick="CreateProduct" class="btn btn-primary">Create Game</button>

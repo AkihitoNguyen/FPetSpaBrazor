@@ -1,5 +1,5 @@
 ﻿using FPetSpaBrazor.DAL;
-using FPetSpaBrazor.Data;
+using FPetSpaBrazor.DAL.Data;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
